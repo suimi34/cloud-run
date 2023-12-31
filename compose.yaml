@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  gcloud:
+    image: google/cloud-sdk:455.0.0-alpine
+    volumes:
+      - .:/usr/src
+      - gcloud_config_data:/root/.config/gcloud
+    working_dir: /usr/src
+    entrypoint: bash
+
+volumes:
+  gcloud_config_data:

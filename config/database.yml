@@ -50,6 +50,8 @@ test:
 #
 production:
   <<: *default
-  database: cloud_run_production
-  username: cloud_run
-  password: <%= ENV["CLOUD_RUN_DATABASE_PASSWORD"] %>
+  host: <%= ENV["DB_HOST"] %>
+  post: <%= ENV["DB_PORT"] %>
+  database: <%= ENV["DB_NAME"] %>
+  username: <%= ENV["DB_USER"] %>
+  password: <%= ENV["DB_PASS"] %>
