@@ -1,6 +1,15 @@
 version: '3.7'
 
 services:
+  db:
+    image: mysql:5.7.41
+    platform: linux/x86_64
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
   gcloud:
     image: google/cloud-sdk:455.0.0-alpine
     volumes:
@@ -11,3 +20,4 @@ services:
 
 volumes:
   gcloud_config_data:
+  db_data:
