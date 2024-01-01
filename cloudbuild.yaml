@@ -18,8 +18,7 @@ steps:
     - |
       gcloud run deploy --image gcr.io/${PROJECT_ID}/${_SERVICE_NAME} \
       --region asia-northeast1 \
-      --allow-unauthenticated \
-      --set-env-var DB_HOST=
+      --allow-unauthenticated
     secretEnv: ["RAILS_KEY"]
 
 substitutions:
