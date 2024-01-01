@@ -16,7 +16,7 @@ steps:
     args:
     - -c
     - |
-      gcloud run deploy --image gcr.io/${PROJECT_ID}/${_SERVICE_NAME} \
+      gcloud run deploy ${_SERVICE_NAME} --image gcr.io/${PROJECT_ID}/${_SERVICE_NAME} \
       --region asia-northeast1 \
       --allow-unauthenticated
     secretEnv: ["RAILS_KEY"]
