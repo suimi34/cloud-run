@@ -23,11 +23,11 @@ steps:
 
 substitutions:
   _SERVICE_NAME: rails-cloud-run
-  _SECRET_NAME: rails-cloud-run
+  _SECRET_NAME: RAILS_KEY
 
 availableSecrets:
   secretManager:
-  - versionName: projects/${PROJECT_ID}/secrets/${_SECRET_NAME}/versions/latest
+  - versionName: projects/156178245176/secrets/${_SECRET_NAME}/versions/latest
     env: RAILS_KEY
 
 images:
