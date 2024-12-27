@@ -35,6 +35,16 @@ availableSecrets:
   secretManager:
   - versionName: projects/156178245176/secrets/${_SECRET_NAME}/versions/latest
     env: RAILS_KEY
+  - versionName: projects/156178245176/secrets/DB_HOST/versions/latest
+    env: DB_HOST
+  - versionName: projects/156178245176/secrets/DB_PORT/versions/latest
+    env: DB_PORT
+  - versionName: projects/156178245176/secrets/DB_NAME/versions/latest
+    env: DB_NAME
+  - versionName: projects/156178245176/secrets/DB_USER/versions/latest
+    env: DB_USER
+  - versionName: projects/156178245176/secrets/DB_PASS/versions/latest
+    env: DB_PASS
 
 images:
   - "gcr.io/${PROJECT_ID}/${_SERVICE_NAME}"
