@@ -22,8 +22,8 @@ steps:
     secretEnv: ["RAILS_KEY"]
 
 substitutions:
-  _SERVICE_NAME: cloud-run
-  _SECRET_NAME: cloud-run
+  _SERVICE_NAME: rails-cloud-run
+  _SECRET_NAME: rails-cloud-run
 
 availableSecrets:
   secretManager:
